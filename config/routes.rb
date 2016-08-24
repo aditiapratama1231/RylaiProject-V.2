@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.

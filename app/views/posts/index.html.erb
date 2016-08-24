@@ -2,9 +2,9 @@
 
 <h1>Listing Posts</h1>
 
-<table>
-  <thead>
-    <tr>
+<table class="table">  
+  <thead class="thead-default">
+    <tr class="bg-primary">
       <th>Title</th>
       <th>Body</th>
       <th>Author name</th>
@@ -29,4 +29,3 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
-<%= link_to "Signout", destroy_user_session_path, method: :delete %>

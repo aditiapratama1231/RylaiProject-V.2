@@ -18,7 +18,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-digitalocean'
 gem 'omniauth-facebook'
-
+gem 'ckeditor', '~> 4.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
