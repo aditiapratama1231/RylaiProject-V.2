@@ -25,6 +25,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @post = Post.find(params[:post_id])
+
     @comment = @post.comments.create(comment_params)
     redirect_to post_path(@post)
 

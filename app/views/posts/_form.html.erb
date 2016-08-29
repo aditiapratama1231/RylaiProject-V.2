@@ -1,29 +1,32 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<% if user_signed_in? %>
+        <%= form_for(@post) do |f| %>
+          <% if @post.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+              <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
 
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field" style="padding-right:500px;">
-    <%= f.label :body %><br>
-    <%= f.cktext_area :body, rows: 10 %>
-  </div>
-  <div class="field">
-    <%= f.label :author_name %><br>
-    <%= f.text_field :author_name , :value => current_user.name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+          <div class="field">
+            <%= f.label :title %><br>
+            <%= f.text_field :title %>
+          </div>
+          <div class="field" style="padding-right:500px;">
+            <%= f.label :body %><br>
+            <%= f.cktext_area :body, rows: 10 %>
+          </div>
+          <div class="field">
+            <%= f.label :author_name %><br>
+            <%= f.text_field :author_name , :value => current_user.name %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+<% else %>
+      <p>You must login </p>
 <% end %>
