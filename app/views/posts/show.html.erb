@@ -61,51 +61,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <h1><a href="#"><%= @post.title %></a></h1>
             <h5>by <a href="#"><%= @post.author_name %> ,</a> <%= @post.created_at.strftime('%b %d, %Y') %> ,</h5>
           </div>
-          <div class="col-md-1 travelling2">
-            <h3><%= @post.comments.count %></h3>
-            <a href="#">comments</a>
-          </div>
             <div class="clearfix"> </div>
              <p><%= raw @post.body %></p>
- 
-              <div class="comments">
-                    <h2><%= @post.comments.count %> Comments</h2>
-                    <p>Reply Comment</p>
-                          <% @post.comments.each do |comment| %>
-                        <div class="catagerious">
-                            <div class="col-md-5 catagerious1">
-                              <div class="catagerious-left">
-                                <h4><a href="#"><%= comment.commenter %></a></h4>
-                                <p><%= comment.created_at.strftime('%b %d, %Y') %></p>
-                              </div>
-                                
-                            </div>
-                            <div class="col-md-7 catagerious2">
-                              <h4><%= comment.body %></h4>
-                              <h6><a href="#">Reply</a></h6>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <% end %>
-                   <%= form_for([@post, @post.comments.build]) do |f| %> 
-                  <div class="col-md-6 contact">
-                  <h3>Add a Comment : </h3>
-                    <form>
-                        <% if user_signed_in? %>
-                             <%= f.text_field :commenter , :class => 'text' ,:value => current_user.name %>
-                        <% else %>
-                             <%= f.text_field :commenter , :class => 'text' %>
-                        <% end %>
-                        <%= f.text_area :body, rows: 10 %>
-                         <%= f.submit %>
-                        <% end %>
-                    </form>
-                  </div>
-                <div class="clearfix"> </div>
-              </div>
- 
-      </div>
-    </div>  
+               <div id="comments">
+                   <%= render 'comment' %>
+            </div>
+          </div>
+       </div>  
   </div>
 <!-- content -->
 <!-- footer -->

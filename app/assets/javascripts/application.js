@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-ui/effect-blind
 //= require ckeditor/init
 //= require_tree .
