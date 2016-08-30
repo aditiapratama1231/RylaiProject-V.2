@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(10)
+    else
     @posts = Post.order('id DESC').page(params[:page]).per(10)
+    end
   end
 
   # GET /posts/1
@@ -78,5 +82,9 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :body, :author_name)
+    end
+
+    def post_params
+      params.require(:post).permit(:title, :body, :author_name, :tag_list)
     end
 end
