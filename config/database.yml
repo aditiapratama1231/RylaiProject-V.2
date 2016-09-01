@@ -10,17 +10,8 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-# <<<<<<< HEAD
   adapter: postgresql
   encoding: unicode
-# =======
-#   adapter: mysql2
-#   encoding: utf8
-#   pool: 5
-#   username: root
-#   password:
-#   socket: /opt/lampp/var/mysql/mysql.sock
-# >>>>>>> 16038cbebb818cc717df11843700e6aa94656aea
 
 development:
   <<: *default
@@ -53,12 +44,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-# <<<<<<< HEAD
   adapter : postgresql
   encoding: unicode
-# =======
-#   <<: *default
-# >>>>>>> 16038cbebb818cc717df11843700e6aa94656aea
   database: RylaiProject_production
   username: RylaiProject
   password: <%= ENV['RYLAIPROJECT_DATABASE_PASSWORD'] %>
