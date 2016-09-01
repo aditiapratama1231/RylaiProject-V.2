@@ -1,0 +1,1 @@
+$('.col-md-6 contact').html("<%= escape_javascript render(@post) %>");
