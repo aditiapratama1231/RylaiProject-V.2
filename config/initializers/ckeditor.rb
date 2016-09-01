@@ -4,6 +4,7 @@ Ckeditor.setup do |config|
   # Load and configure the ORM. Supports :active_record (default), :mongo_mapper and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
+  config.cdn_url = "//cdn.ckeditor.com/4.5.10/standard/ckeditor.js"
   require "ckeditor/orm/active_record"
 
   # Allowed image file types for upload.
