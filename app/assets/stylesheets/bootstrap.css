@@ -1736,9 +1736,6 @@ input[type="search"] {
 input[type="date"] {
   line-height: 34px;
 }
-.form-group {
-  margin-bottom: 15px;
-}
 .radio,
 .checkbox {
   display: block;
@@ -5596,8 +5593,6 @@ button.close {
 .container-fluid:after,
 .row:before,
 .row:after,
-.form-horizontal .form-group:before,
-.form-horizontal .form-group:after,
 .btn-toolbar:before,
 .btn-toolbar:after,
 .btn-group-vertical > .btn-group:before,
@@ -5623,7 +5618,7 @@ button.close {
 .container:after,
 .container-fluid:after,
 .row:after,
-.form-horizontal .form-group:after,
+.form-horizontal
 .btn-toolbar:after,
 .btn-group-vertical > .btn-group:after,
 .nav:after,

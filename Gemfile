@@ -39,6 +39,8 @@ gem 'pg'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'friendly_id'
+gem 'font-awesome-sass', '~> 4.5.0'
+
 # =======
 # >>>>>>> 16038cbebb818cc717df11843700e6aa94656aea
 
