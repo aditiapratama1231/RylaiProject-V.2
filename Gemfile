@@ -38,7 +38,7 @@ gem 'pg', group: :production
 gem 'pg'
 gem 'carrierwave'
 gem "mini_magick"
-=======
+# =======
 # >>>>>>> 16038cbebb818cc717df11843700e6aa94656aea
 
 # Use ActiveModel has_secure_password
