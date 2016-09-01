@@ -1,5 +1,13 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  after_action :remove_notice, only: :destroy
+
+  private
+
+  def remove_notice
+    flash[:notice] = nil
+  end
+
   private
 
   def sign_up_params
