@@ -26,8 +26,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <span class="menu"> </span>
               <ul>
                 <li><%= link_to 'Home', posts_path %></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Categories</a></li>
                 <div class="clearfix"> </div>
             </ul>
         </div>
@@ -65,7 +65,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="clearfix"> </div>
              <p><%= raw @post.body %></p>
                <div id="comments">
-                   <%= render 'comment' %>
+                   <%= render 'comments/comment' %>
+               </div>
+                  <div class="comments">  
+                      <%= form_for([@post, @post.comments.build], remote: true)  do |f| %> 
+                  <div class="col-md-6 contact">
+                  <h3>Add a Comment : </h3>
+                    <form>
+                        <% if user_signed_in? %>
+                             <%= f.text_field :commenter , :class => 'text' ,:value => current_user.name, :required => true, placeholder: "Enter your name" %>
+                        <% else %>
+                             <%= f.text_field :commenter , :class => 'text', :required => true %>
+                        <% end %>
+                              <%= f.text_area :body, rows: 10 %>
+                               <%= f.submit :id => 'submit'  %>
+                        <% end %>
+                    </form>
+                  </div>
+                <div class="clearfix"> </div>
             </div>
           </div>
        </div>  

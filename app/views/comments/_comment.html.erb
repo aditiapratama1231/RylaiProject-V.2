@@ -1,0 +1,19 @@
+
+                    <h2><%= @post.comments.count %> Comments</h2>
+                    <p>Reply Comment</p>
+                          <% @post.comments.each do |comment| %>
+                        <div class="catagerious">
+                            <div class="col-md-5 catagerious1">
+                              <div class="catagerious-left">
+                                <h4><a href="#"><%= comment.commenter %></a></h4>
+                                <p><%= comment.created_at.strftime('%b %d, %Y') %></p>
+                              </div>
+                                
+                            </div>
+                            <div class="col-md-7 catagerious2">
+                              <h4><%= comment.body %></h4>
+                              <h6><a href="#">Reply</a></h6>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <% end %>
