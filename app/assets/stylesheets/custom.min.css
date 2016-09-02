@@ -1,0 +1,135 @@
+html,body{
+    background: url(../img/cream.jpg);
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+.custom-profile{
+    background: white;
+    padding-right: 15px;
+}
+.custom-side{
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    background: white;
+    color: black;
+    
+}
+.custom-side h1, .custom-side p{
+    color: black;
+}
+.custom-side .thumbnail{
+    border: 1px solid #FF6000;
+}
+.custom-side img{
+    position: relative;
+    margin: auto;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+
+}
+.custom-recent{
+        background: #F9F9F9;
+        border-radius: 0px 0px 5px 5px;
+        
+}
+.custom-post{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0 20px 20px 20px;
+    margin:20px 0px;
+
+}
+.btn-custom{
+    color:white;
+    background: #FF6000;
+    border:solid 1px #FF6000;
+    float:right;
+}
+.btn-custom:hover{
+    color:#FF6000;
+    background: transparent;
+    border:solid 1px #FF6000;
+    float:right;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #FF6000;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote:before {
+  color: #ccc;
+ 
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.btn-custom-edit{
+    color:white;
+    background: #286090;
+    border:solid 1px #286090;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn-custom-edit p{
+    margin: 0px;
+}
+.btn-custom-edit:hover{
+    color:#286090;
+    background: transparent;
+    border:solid 1px #286090;
+    text-decoration: none;
+}
+
+
+.btn-custom-delete{
+    color:white;
+    background: #C9302C;
+    border:solid 1px #C9302C;
+    padding: 10px;
+    color:white;
+    border-radius: 5px;
+}
+.btn-custom-delete p{
+    margin: 0px;
+    color:white;
+}
+.btn-custom-delete:hover{
+    color:#C9302C;
+    background: transparent;
+    border:solid 1px #C9302C;
+    text-decoration: none;
+}
+
+.btn-custom-readmore{
+    color:white;
+    background: #FF6000;
+    border:solid 1px #FF6000;
+    padding: 10px;
+    float: right;
+    border-radius: 5px;
+}
+.btn-custom-readmore p{
+    margin: 0px;
+}
+.btn-custom-readmore:hover{
+    color:#FF6000;
+    background: transparent;
+    border:solid 1px #FF6000;
+    float:right;
+    text-decoration: none;
+}
