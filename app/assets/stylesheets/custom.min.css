@@ -88,6 +88,9 @@ blockquote p {
 .btn-custom-edit p{
     margin: 0px;
 }
+.btn-cusrom-edit a{
+  color:white;
+}
 .btn-custom-edit:hover{
     color:#286090;
     background: transparent;
@@ -108,6 +111,9 @@ blockquote p {
     margin: 0px;
     color:white;
 }
+.btn-cusrom-delete a{
+  color:white;
+}
 .btn-custom-delete:hover{
     color:#C9302C;
     background: transparent;
@@ -125,6 +131,9 @@ blockquote p {
 }
 .btn-custom-readmore p{
     margin: 0px;
+}
+.btn-cusrom-readmore a{
+  color:white;
 }
 .btn-custom-readmore:hover{
     color:#FF6000;

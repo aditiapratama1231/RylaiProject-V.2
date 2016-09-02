@@ -59,7 +59,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="travelling">
             <div class="col-md-10 travelling1">
                 <h1><%= link_to post.title, post %></h1>
-                <h5>by <a href="#"><%= post.author_name %> ,</a> <%= post.created_at.strftime('%b %d, %Y') %>
+                <h5>by <a href="#"><%= post.author_name %>,
+                </a> <%= post.created_at.strftime('%b %d, %Y') %>
                , Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></h5>
                 <p><%= raw post.body.truncate(480) %></p>
             </div>
