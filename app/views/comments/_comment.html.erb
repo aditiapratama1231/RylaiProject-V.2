@@ -16,4 +16,17 @@
                             </div>
                             <div class="clearfix"> </div>
                         </div>
+                    <% end %>
+                    <%= form_for([@post, @post.comments.build], remote: true)  do |f| %> 
+                  <div class="col-md-6 contact">
+                  <h3>Add a Comment : </h3>
+                    <form>
+                        <% if user_signed_in? %>
+                             <%= f.text_field :commenter , :class => 'text' ,:value => current_user.name, :required => true, placeholder: "Enter your name" %>
+                        <% else %>
+                             <%= f.text_field :commenter , :class => 'text', :required => true %>
                         <% end %>
+                              <%= f.text_area :body, rows: 10 %>
+                               <%= f.submit :id => 'submit' %>
+                        <% end %>
+                    </form>

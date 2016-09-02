@@ -65,22 +65,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="clearfix"> </div>
              <p><%= raw @post.body %></p>
                <div id="comments">
-                   <%= render 'comments/comment' %>
+                   
                </div>
                   <div class="comments">  
-                      <%= form_for([@post, @post.comments.build], remote: true)  do |f| %> 
-                  <div class="col-md-6 contact">
-                  <h3>Add a Comment : </h3>
-                    <form>
-                        <% if user_signed_in? %>
-                             <%= f.text_field :commenter , :class => 'text' ,:value => current_user.name, :required => true, placeholder: "Enter your name" %>
-                        <% else %>
-                             <%= f.text_field :commenter , :class => 'text', :required => true %>
-                        <% end %>
-                              <%= f.text_area :body, rows: 10 %>
-                               <%= f.submit :id => 'submit'  %>
-                        <% end %>
-                    </form>
+                      <%= render 'comments/comment' %>
                   </div>
                 <div class="clearfix"> </div>
             </div>

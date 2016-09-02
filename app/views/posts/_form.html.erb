@@ -13,15 +13,15 @@
 
           <div class="field">
             <%= f.label :title %><br>
-            <%= f.text_field :title %>
+            <%= f.text_field :title, :class => 'form-control' %>
           </div>
           <div class="field" style="padding-right:500px;">
             <%= f.label :body %><br>
-            <%= f.cktext_area :body, rows: 10 %>
+            <%= f.cktext_area :body, :class => 'form-control'%>
           </div>
           <div class="field">
             <%= f.label :tag_list, "Tags (separated by commas)" %><br>
-            <%= f.text_field :tag_list %>
+            <%= f.text_field :tag_list, :class => 'form-control' %>
           </div>
           <div class="field">
             <%= f.label :author_name %><br>

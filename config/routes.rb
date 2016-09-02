@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :comments
   end
   get 'tags/:tag', to: 'posts#index', as: :tag
- resources :users, :only => [:show]
+  resources :users, :only => [:show]
   devise_for :users, :path_prefix => 'd', :controllers => { :omniauth_callbacks => "callbacks", registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

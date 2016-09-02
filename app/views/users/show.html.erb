@@ -1,11 +1,55 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <title>IMDB</title>
+    <!-- LINK CALL -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/custom.min.css" rel="stylesheet" />
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div class="container custom-profile">
+      <div class="row">
+        <div class="col-md-4 custom-side">
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+          <img src="http://placehold.it/300x350?text=1" class="img-rounded img-responsive thumbnail">
+          <hr style="width:5px;height:2px;background:white;">
+          <blockquote>
+                <h1><%= current_user.name %></h1>
+          </blockquote>
+                <p>
+                <i class="glyphicon glyphicon-envelope" style="color:#FF6000; padding-right:5px;"></i><%= current_user.email %>
+                <br>
+                <p>"<%= current_user.bio %>"</p>
+        </div>
+        <div class="col-md-8  custom-recent">
+        <div class="container-fluid">
+                <h1 style="border-bottom:solid 2px #FF6000;">Recent Post</h1>
+                  <div class="row">
+                  <% @post.each do |post| %>
+                    <div class="col-md-12 custom-post"><br>
+                      <h2><%= post.title %></h2>
+                      <h4><%= raw post.body %></h4>
+                      <button class="btn btn-primary ">Update</button>
+                      <button class="btn btn-warning ">Delete</button>
+                      <button class="btn btn-warning btn-custom">Readmore</button>
+                    </div>
+                    <% end %>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  </body>
+</html>

@@ -27,7 +27,17 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
 
     @comment = @post.comments.create(comment_params)
-    redirect_to post_path(@post)
+    # redirect_to post_path(@post)
+     respond_to do |format|
+      if @comment.update(comment_params)
+        format.html { redirect_to post_path(@post), notice: 'Comment was successfully updated.' }
+        format.js   { }
+        format.json { render :show, status: :ok, location: @comment }
+      else
+        format.html { render :edit }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
 
   end
 
