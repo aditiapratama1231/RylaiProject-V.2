@@ -12,7 +12,8 @@
                             </div>
                             <div class="col-md-7 catagerious2">
                               <h4><%= comment.body %></h4>
-                              <h6><a href="#">Reply</a></h6>
+                              <h6><%= link_to 'Delete Comment', [comment.post, comment],
+                                    method: :delete, data: { confirm: 'Are you sure?' } %></h6>
                             </div>
                             <div class="clearfix"> </div>
                         </div>

@@ -21,7 +21,8 @@ gem 'omniauth-facebook'
 gem 'ckeditor', '~> 4.1'
 gem 'kaminari', '~> 0.16.1'
 gem 'acts-as-taggable-on'
-
+gem "select2-rails"
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :posts do
       resources :comments
   end
-  get 'tags/:tag', to: 'posts#index', as: :tag
+  
+
+  get 'tags/:tag', to: 'posts#index',  as: :tag
 
   
   resources :users, :only => [:show]

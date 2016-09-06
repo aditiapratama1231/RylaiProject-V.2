@@ -19,9 +19,9 @@
             <%= f.label :body %><br>
             <%= f.cktext_area :body, :class => 'form-control'%>
           </div>
-          <div class="field">
-            <%= f.label :tag_list, "Tags (separated by commas)" %><br>
-            <%= f.text_field :tag_list, :class => 'form-control' %>
+          <div class="input-row">
+            <%= f.label :tags %>
+            <%= f.text_field :tag_list %>
           </div>
           <div class="field">
             <%= f.label :author_name %><br>
@@ -34,3 +34,12 @@
 <% else %>
       <p>You must login </p>
 <% end %>
+
+
+  <% content_for :javascript_in_body do %>
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+       $('.input-row #post_topics_list, .input-row #post_tags_list').select2({tags: true})
+    });
+  <% end %>
+  <% end %>

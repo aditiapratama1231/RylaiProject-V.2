@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-ui/effect-blind
+//= require jquery
+//= require bootstrap-sprockets
 //= require ckeditor/init
+//= require select2
 //= require_tree .

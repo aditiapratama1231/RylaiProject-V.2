@@ -21,12 +21,12 @@
           <img src="http://placehold.it/300x350?text=1" class="img-rounded img-responsive thumbnail">
           <hr style="width:5px;height:2px;background:white;">
           <blockquote>
-                <h1><%= current_user.name %></h1>
+                <h1><%= @user.name %></h1>
           </blockquote>
                 <p>
                 <i class="glyphicon glyphicon-envelope" style="color:#FF6000; padding-right:5px;"></i><%= current_user.email %>
                 <br>
-                <p>"<%= current_user.bio %>"</p>
+                <p>"<%= @user.bio %>"</p>
         </div>
         <div class="col-md-8  custom-recent">
         <div class="container-fluid">
