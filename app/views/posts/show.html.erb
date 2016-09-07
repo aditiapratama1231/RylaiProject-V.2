@@ -60,7 +60,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <div class="col-md-10 travelling1">
             <h1><a href="#"><%= @post.title %></a></h1>
             <h5>by <a href="#"><%= @post.author_name %> ,</a> <%= @post.created_at.strftime('%b %d, %Y') %>
-            , Tags: <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></h5>
+            , Tags: <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>,</h5>
+            <h5><%= social_share_button_tag(@post.title, url: 'https://blooming-river-52711.herokuapp.com/', popup: true) %></h5>
           </div>
             <div class="clearfix"> </div>
              <p><%= raw @post.body %></p>
@@ -92,3 +93,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- footer -->
 </body>
 </html>
+

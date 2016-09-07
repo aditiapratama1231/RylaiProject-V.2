@@ -27,6 +27,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
 
     @comment = @post.comments.create(comment_params)
+    
     # redirect_to post_path(@post)
      respond_to do |format|
       if @comment.update(comment_params)

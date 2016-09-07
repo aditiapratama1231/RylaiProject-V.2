@@ -18,4 +18,11 @@
 //= require bootstrap-sprockets
 //= require ckeditor/init
 //= require select2
+//= require social-share-button
 //= require_tree .
+
+
+$('a[data-popup]').live('click', function(e) { 
+    window.open($(this).attr('href')); 
+    e.preventDefault(); 
+}); 
